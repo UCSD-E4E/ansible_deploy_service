@@ -3,7 +3,6 @@
         "tests"
     ],
     "python.testing.unittestEnabled": false,
-    "python.linting.pylintEnabled": true,
     "editor.rulers": [
         100
     ],
