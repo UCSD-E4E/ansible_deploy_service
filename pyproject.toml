@@ -14,7 +14,11 @@ readme = "README.md"
 repository = 'https://github.com/UCSD-E4E/ansible_deploy_service'
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
+prometheus-client = "^0.21.0"
+gitpython = "^3.1.43"
+docker = "^7.1.0"
+platformdirs = "^4.3.6"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.2.7"
@@ -24,10 +28,10 @@ autopep8 = "^2.3.1"
 coverage = "^7.6.1"
 
 [tool.poetry.scripts]
-ExamplePythonConsoleScript = 'example_package.example_module:exampleEntryPoint'
+ansible_deploy_service = 'ansible_deploy_service.main:main'
 
 [tool.semantic_release]
-version_variables = ["example_package/__init__.py:__version__"]
+version_variables = ["ansible_deploy_service/__init__.py:__version__"]
 version_toml = [
     "pyproject.toml:tool.poetry.version",
 ]
